@@ -3,7 +3,7 @@
 This is a Wordpress plugin which creates a Widget inside Wordpress which makes it easy to add the Biscoint price to any Widget area of your site, such as the sidebar.
 
 
-To use it, first download the last release .zip file, and then, inside the admin area of your wordpress site, go to Plugins > Add new > Upload Plugin (if you don't know how to do this, here's a [nice blog post](https://www.wpbeginner.com/beginners-guide/step-by-step-guide-to-install-a-wordpress-plugin-for-beginners/) with detailed instructions).
+To use it, first download the [last release](https://github.com/Biscoint/biscoint-widget-wordpress-plugin/releases) .zip file, and then, inside the admin area of your wordpress site, go to Plugins > Add new > Upload Plugin (if you don't know how to do this, here's a [nice blog post](https://www.wpbeginner.com/beginners-guide/step-by-step-guide-to-install-a-wordpress-plugin-for-beginners/) with detailed instructions).
 
 
 After install is complete, you'll be shown the option to activate the plugin. Do so.
