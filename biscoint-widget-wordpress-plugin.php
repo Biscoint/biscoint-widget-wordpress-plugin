@@ -153,7 +153,7 @@ class Biscoint_Widget extends WP_Widget {
 
 		// Display the widget
 		echo '<div id="biscointWidget"></div>';
-		echo '<script type="text/javascript" src="https://staging-app.biscoint.io/widget/widget.js"></script>';
+		echo '<script type="text/javascript" src="https://app.biscoint.io/widget/widget.js"></script>';
 		echo '<script type="text/javascript">';
 		echo   'BiscointWidget.init({';
 		echo     'locale: "' . $locale . '",';
