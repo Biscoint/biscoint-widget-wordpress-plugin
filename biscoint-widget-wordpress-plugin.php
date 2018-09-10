@@ -3,7 +3,7 @@
 Plugin Name: Biscoint Widget Plugin
 Plugin URI: https://github.com/Biscoint/biscoint-widget-wordpress-plugin
 Description: This plugin adds a custom widget to show Biscoint best price.
-Version: 1.0
+Version: 1.0.1
 Author: Biscoint.io
 Author URI: https://biscoint.io/
 License: GPL2
