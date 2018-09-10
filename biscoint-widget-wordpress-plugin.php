@@ -116,6 +116,26 @@ class Biscoint_Widget extends WP_Widget {
 		</p>
 		
 		
+		<?php // theme ?>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'theme' ); ?>"><?php _e( 'Theme:', 'text_domain' ); ?></label>
+			<select name="<?php echo $this->get_field_name( 'theme' ); ?>" id="<?php echo $this->get_field_id( 'theme' ); ?>" class="widefat">
+			<?php
+			// Your options array
+			$options = array(
+				'light' => __( 'Light Theme', 'text_domain' ),
+				'dark' => __( 'Dark Theme', 'text_domain' ),
+			);
+
+			// Loop through options and add each one to the select dropdown
+			foreach ( $options as $key => $name ) {
+				echo '<option value="' . esc_attr( $key ) . '" id="' . esc_attr( $key ) . '" '. selected( $theme, $key, false ) . '>'. $name . '</option>';
+
+			} ?>
+			</select>
+		</p>
+		
+		
 		<?php // refreshIntervalMs ?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'refreshIntervalMs' ) ); ?>"><?php _e( 'Refresh Interval:', 'text_domain' ); ?></label>
@@ -132,6 +152,7 @@ class Biscoint_Widget extends WP_Widget {
 		$instance['operation']    = isset( $new_instance['operation'] ) ? wp_strip_all_tags( $new_instance['operation'] ) : '';
 		$instance['base_currency']    = isset( $new_instance['base_currency'] ) ? wp_strip_all_tags( $new_instance['base_currency'] ) : '';
 		$instance['quote_currency']    = isset( $new_instance['quote_currency'] ) ? wp_strip_all_tags( $new_instance['quote_currency'] ) : '';
+		$instance['theme']    = isset( $new_instance['theme'] ) ? wp_strip_all_tags( $new_instance['theme'] ) : '';
 		$instance['refreshIntervalMs']    = isset( $new_instance['refreshIntervalMs'] ) ? wp_strip_all_tags( $new_instance['refreshIntervalMs'] ) : '';
 		return $instance;
 	}
@@ -146,6 +167,7 @@ class Biscoint_Widget extends WP_Widget {
 		$operation     		= isset( $instance['operation'] )			? $instance['operation']			: '';
 		$base_currency     	= isset( $instance['base_currency'] )		? $instance['base_currency']		: '';
 		$quote_currency     = isset( $instance['quote_currency'] )		? $instance['quote_currency']		: '';
+		$theme     = isset( $instance['theme'] )		? $instance['theme']		: '';
 		$refreshIntervalMs	= isset( $instance['refreshIntervalMs'] )	? $instance['refreshIntervalMs']	: '';
 		
 		// WordPress core before_widget hook (always include )
@@ -160,6 +182,7 @@ class Biscoint_Widget extends WP_Widget {
 		echo     'op: "' . $operation . '",';
 		echo     'base: "' . $base_currency. '",';
 		echo     'quote: "' . $quote_currency . '",';
+		echo     'theme: "' . $theme . '",';
 		echo     'refreshIntervalMs: ' . $refreshIntervalMs . ',';
 		echo   '});';
 		echo '</script>';
